@@ -37,6 +37,9 @@ module.exports = {
   },
   router: {
     base: '/my-project/'
-  }
+  },
+  modules: [
+    '@nuxtjs/pwa'
+  ]
 }
 
