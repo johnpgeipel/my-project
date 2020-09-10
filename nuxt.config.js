@@ -10,7 +10,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },     
+      
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' },
     ]
   },
   /*
@@ -39,7 +41,11 @@ module.exports = {
     base: '/my-project/'
   },
   modules: [
-    '@nuxtjs/pwa'
-  ]
+    '@nuxtjs/pwa',
+    'bootstrap-vue/nuxt'
+  ],
+  bootstrapVue: {
+    icons: true // Install the IconsPlugin (in addition to BootStrapVue plugin
+  }
 }
 

@@ -1,9 +1,9 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <AppLogo/>
       <h1 class="title">
-        my-project
+        portfolio
       </h1>
       <h2 class="subtitle">
         Nuxt.js project
@@ -19,7 +19,7 @@
           target="_blank"
           rel="noopener"
           class="button--grey">GitHub</a>
-      </div>
+      </div>      
     </div>
   </section>
 </template>
