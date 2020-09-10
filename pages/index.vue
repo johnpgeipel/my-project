@@ -19,7 +19,17 @@
           target="_blank"
           rel="noopener"
           class="button--grey">GitHub</a>
-      </div>      
+      </div>
+      <div class="portfolioItems">
+        <h2 v-for="item in list"
+            :key="item">
+          {{ item }}</h2>
+      </div>
+      <div class="resumeItems">
+        <h2 v-for="item in jobs"
+            :key="item.name">
+          {{ item.title }} : {{ item.date }}</h2>
+      </div>
     </div>
   </section>
 </template>
@@ -30,6 +40,26 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  data() {
+    return {
+      list: {
+          line1: "Here is an item.",
+          line2: "Here is an item.",
+          line3: "Here is an item."
+      },
+      jobs: [
+        {
+          title: "Artist",
+          date: "January 1, 2020"
+        },
+        {
+          title: "Web Dev",
+          date: "September 29, 2020"
+        }
+      ]
+      
+    }
   }
 }
 </script>
