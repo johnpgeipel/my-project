@@ -1,17 +1,26 @@
 <template>
-  <div class="container">
-    <Header />
-    <h1 class="title">About</h1>
-  </div>
+    <div class="main">
+        <Header :header="header"/>
+        <div class="container">
+        </div>    
+    </div>    
 </template>
 <script>
-import Header from '~/components.Header.vue'
+import Header from '~/components/Header.vue';
 
 export default {
     components: {
         Header
+    },
+    data() {
+        return {
+            header: {
+                title: "about",
+                subtitle: "front-end web dev | graphic artist",
+                text: "i make stuff"
+            }
+        }
     }
-    
 }
 </script>
 <style lang="css" scoped>

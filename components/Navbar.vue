@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="lg" type="light" variant="light" fixed="top">
+    <b-navbar toggleable="lg" type="dark" variant="danger" fixed="top">
         <b-navbar-brand>
             <nuxt-link class="navbarBrand" to="/">JPG</nuxt-link>
         </b-navbar-brand>
@@ -29,8 +29,27 @@ export default {
 
     .navbarBrand,
     .navbarLink {
-        color: black;
+        color: white;
     }
+
+    .navCollapse {
+        margin-left: 0rem;
+    }
+
+    @media screen and (min-width: 990px) {
+        .navCollapse {
+        margin-left: 2rem;
+        }
+    }
+
+    .show {
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    /* .show .navbarNav {
+        margin: 0 auto;
+    } */
 
     
 </style>

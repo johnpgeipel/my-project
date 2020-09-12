@@ -1,11 +1,26 @@
 <template>
-  <div class="container">
-    <h1 class="title">Contact</h1>
-  </div>
+  <div class="main">
+        <Header :header="header"/>
+        <div class="container">
+        </div>    
+  </div>   
 </template>
 <script>
+import Header from '~/components/Header.vue';
+
 export default {
-    
+  components: {
+    Header
+  },
+  data() {
+    return {
+      header: {
+                title: "contact",
+                subtitle: "feel free to reach out to me",
+                text: "johnpgeipel@gmail.com"
+      }
+    }
+  }
 }
 </script>
 <style lang="css" scoped>

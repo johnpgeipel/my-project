@@ -1,25 +1,10 @@
 <template>
+  <div class="main">
+        <Header :header="header"/>
+        <div class="container">
+        </div>    
   <section class="container">
     <div>
-      <AppLogo/>
-      <h1 class="title">
-        portfolio
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener"
-          class="button--grey">GitHub</a>
-      </div>
       <div class="portfolioItems">
         <h2 v-for="item in list"
             :key="item">
@@ -32,17 +17,23 @@
       </div>
     </div>
   </section>
+  </div> 
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import Header from '~/components/Header.vue';
 
 export default {
   components: {
-    AppLogo
+    Header
   },
   data() {
     return {
+      header: {
+                title: "john's portfolio",
+                subtitle: "hi, i'm a front-end web dev",
+                text: "johnpgeipel@gmail.com"
+      },
       list: {
           line1: "Here is an item.",
           line2: "Here is an item.",
@@ -66,7 +57,7 @@ export default {
 
 <style>
 .container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,11 +69,12 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  /* color: #35495e; */
   letter-spacing: 1px;
 }
 
 .subtitle {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   font-weight: 300;
   font-size: 42px;
   color: #526488;
